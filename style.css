@@ -1,0 +1,93 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to right, #d8a7f5, #e2d5f7);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation */
+header {
+    background: transparent;
+    padding: 20px 50px;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #6a0dad;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Text Section */
+.content {
+    max-width: 50%;
+}
+
+.evento {
+    font-weight: bold;
+    font-style: italic;
+    color: #6a0dad;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Image Section */
+.image-container {
+    max-width: 45%;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content, .image-container {
+        max-width: 100%;
+    }
+}
