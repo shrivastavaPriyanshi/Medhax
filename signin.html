@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">HELP</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+
+        <!-- Role Selection -->
+        <div class="role-box" id="roleBox">
+            <h2>Select Your Role</h2>
+            <button onclick="showForm('admin')">Admin</button>
+            <button onclick="showForm('student')">Student</button>
+            <button onclick="showForm('mentor')">Mentor</button>
+        </div>
+
+        <!-- Sign-in Form (Initially hidden) -->
+        <div class="signin-box" id="signinBox" style="display: none;">
+            <h2 id="formTitle">Sign In</h2>
+            
+            <form id="loginForm">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="links">
+                <a href="#">Create an account</a>
+                <a href="#">Forget password</a>
+            </div>
+
+            <!-- Back button -->
+            <button onclick="goBack()">Back</button>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>
