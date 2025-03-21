@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import eventoImage from '../assets/evento image.jpg';  // Import the image
 
 const Hero = () => {
   return (
@@ -15,8 +16,9 @@ const Hero = () => {
           Sign in with your institute email & discover your perfect club today!
         </p>
       </div>
+
       <div className="hero-image">
-        <img src="/src/assets/tech-image.jpg" alt="Techno Clubs" />
+        <img src={eventoImage} alt="Techno Clubs" />
       </div>
     </div>
   );
