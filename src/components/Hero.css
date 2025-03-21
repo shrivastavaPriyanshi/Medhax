@@ -1,0 +1,33 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    color: #6200ea;
+    font-weight: bold;
+  }
+  
+  .hero-content h2, h3 {
+    font-size: 30px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
