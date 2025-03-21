@@ -1,28 +1,17 @@
-/* Navbar styling */
 .header {
-  background: #1e90ff;    /* Blue background */
-  color: white;
-  padding: 15px 30px;
-  z-index: 1000;
-  transition: all 0.3s ease;  /* Smooth scrolling effect */
-}
-
-/* Fixed navbar */
-.fixed-header {
-  position: fixed;          /* Make navbar fixed */
+  position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+  background: #333;
+  color: #fff;
+  z-index: 1000;
+  transition: 0.3s;
 }
 
-/* Navigation styling */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 15px 30px;
 }
 
 .nav-links {
@@ -31,18 +20,11 @@
   gap: 20px;
 }
 
-.nav-links li a {
-  text-decoration: none;
+.nav-links a {
   color: white;
-  font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none;
 }
 
-.nav-links li a:hover {
-  color: #ffd700;  /* Hover color effect */
-}
-
-/* Ensure the content does not hide behind navbar */
-body {
-  padding-top: 80px;   /* Adjust padding to prevent content from hiding */
+.nav-links a:hover {
+  color: #f39c12;
 }
