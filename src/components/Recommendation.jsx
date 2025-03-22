@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Recommendation.css";
 
 const Recommendation = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     skills: "",
     interest: [],
@@ -45,7 +48,7 @@ const Recommendation = () => {
       formData.interest.length === 0 ||
       formData.domain.length === 0
     ) {
-      alert("Please answer all questions before saving.");
+      alert("please answer all questions before saving.");
       return;
     }
 
@@ -66,6 +69,11 @@ const Recommendation = () => {
 
     setAiSuggestion(randomSuggestions);
     setShowRecommendation(true);
+  };
+
+  // ✅ corrected navigation to dashboard
+  const handleSkip = () => {
+    navigate("/dashboard");  // navigate to the dashboard component
   };
 
   const interests = [
@@ -109,26 +117,26 @@ const Recommendation = () => {
       </nav>
 
       <div className="content-wrapper">
-        {/* Left Section (Questions) */}
+        {/* left section (questions) */}
         <div className="left-section">
-          <h2>Confused, What to do next? 🤔</h2>
-          <p>Try our AI-based Recommendation system...!!!</p>
+          <h2>confused, what to do next? 🤔</h2>
+          <p>try our ai-based recommendation system...!!!</p>
 
-          <label>Your Skills?</label>
+          <label>your skills?</label>
           <input
             type="text"
             name="skills"
-            placeholder="Enter your skills"
+            placeholder="enter your skills"
             value={formData.skills}
             onChange={handleInputChange}
           />
 
-          <label>Your Interest?</label>
+          <label>your interest?</label>
           <div className="dropdown" onClick={() => toggleDropdown("interest")}>
             <div className="dropdown-header">
               {formData.interest.length > 0
                 ? formData.interest.join(", ")
-                : "Select up to 3 interests"}
+                : "select up to 3 interests"}
             </div>
             {isInterestOpen && (
               <div className="dropdown-list">
@@ -146,12 +154,12 @@ const Recommendation = () => {
             )}
           </div>
 
-          <label>Your Domain?</label>
+          <label>your domain?</label>
           <div className="dropdown" onClick={() => toggleDropdown("domain")}>
             <div className="dropdown-header">
               {formData.domain.length > 0
                 ? formData.domain.join(", ")
-                : "Select up to 3 domains"}
+                : "select up to 3 domains"}
             </div>
             {isDomainOpen && (
               <div className="dropdown-list">
@@ -169,18 +177,20 @@ const Recommendation = () => {
             )}
           </div>
 
-          {/* Buttons */}
+          {/* buttons */}
           <div className="button-container">
-            <button className="skip-btn">Skip</button>
+            <button className="skip-btn" onClick={handleSkip}>
+              skip
+            </button>
             <button onClick={handleSave} className="get-recommendation-btn">
-              Get Recommendation
+              get recommendation
             </button>
           </div>
         </div>
 
-        {/* Right Section (Suggestions) */}
+        {/* right section (suggestions) */}
         <div className="right-section">
-          <h3>🔥 Recommended Clubs</h3>
+          <h3>🔥 recommended clubs</h3>
           {showRecommendation ? (
             <ul>
               {aiSuggestion.map((club, index) => (
@@ -189,7 +199,7 @@ const Recommendation = () => {
             </ul>
           ) : (
             <p className="no-recommendation">
-              Fill the form and click "Get Recommendation" to see suggestions.
+              fill the form and click "get recommendation" to see suggestions.
             </p>
           )}
         </div>

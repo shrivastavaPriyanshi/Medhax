@@ -4,8 +4,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Clubs from './components/Clubs';
 import Footer from './components/Footer';
-import SignIn from './components/SignIn';  // Importing SignIn component
-import Recommendation from './components/Recommendation';  // Importing Recommendation component
+import SignIn from './components/SignIn';
+import Recommendation from './components/Recommendation';
+import Dashboard from './components/Dashboard';
 
 const App = () => {
   return (
@@ -13,14 +14,18 @@ const App = () => {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Clubs />
-            </>
-          } />
-          <Route path="/signin" element={<SignIn />} />   {/* SignIn route */}
-          <Route path="/recommendation" element={<Recommendation />} />  {/* New Recommendation route */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Clubs />
+              </>
+            }
+          />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/recommendation" element={<Recommendation />} />
+          <Route path="/dashboard" element={<Dashboard />} />  {/* ✅ added dashboard route */}
         </Routes>
         <Footer />
       </div>

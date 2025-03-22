@@ -96,7 +96,7 @@ label {
   margin: 10px 0 5px;
 }
 
-input {
+input, select {
   padding: 12px;
   font-size: 14px;
   margin-bottom: 15px;
@@ -106,7 +106,7 @@ input {
   transition: 0.3s;
 }
 
-input:focus {
+input:focus, select:focus {
   border: 1px solid #6a0dad;
   box-shadow: 0 0 8px #a85cf7;
 }
@@ -143,25 +143,101 @@ button:hover {
   margin-top: 20px;
 }
 
-.links a {
+.links a, .links span {
   text-decoration: none;
   color: #6a0dad;
   font-size: 14px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.links a:hover {
+.links a:hover, .links span:hover {
   text-decoration: underline;
   color: #a85cf7;
+}
+
+/* Sign-up Box Styling */
+.sign-up-box {
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.sign-up-box h3 {
+  font-size: 26px;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.sign-up-box form label {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.sign-up-box form input,
+.sign-up-box form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.sign-up-box form input:focus,
+.sign-up-box form select:focus {
+  border: 1px solid #6a0dad;
+  box-shadow: 0 0 8px #a85cf7;
+}
+
+.sign-up-box form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a0dad, #a85cf7);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sign-up-box form button:hover {
+  background: #8e5fc7;
+  transform: translateY(-3px);
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .left-panel, .right-panel {
-      width: 100%;
+    width: 100%;
+  }
+
+  .sign-up-box {
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

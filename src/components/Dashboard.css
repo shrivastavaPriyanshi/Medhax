@@ -1,0 +1,14 @@
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 80px;
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
