@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #d8a7f4, #ffffff);
+  background: linear-gradient(135deg, #AD74C3, #AD74C3);
   min-height: 100vh;
   color: #000;
 }
@@ -26,3 +26,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+

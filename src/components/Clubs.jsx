@@ -32,6 +32,21 @@ const Clubs = () => {
           <p>Providing humanitarian services and promoting goodwill.</p>
         </div>
 
+        <div className="club-card">
+          <h3>GeeksForGeeks</h3>
+          <p>Empowering communities through technology and fostering innovation for a better tomorrow</p>
+        </div>
+
+        <div className="club-card">
+          <h3>CodeSoft</h3>
+          <p>Innovating through code and shaping the future with technology-driven solutions.</p>
+        </div>
+
+        <div className="club-card">
+          <h3>CodeChef</h3>
+          <p>Nurturing coding talent and promoting competitive programming excellence</p>
+        </div>
+
       </div>
     </div>
   );

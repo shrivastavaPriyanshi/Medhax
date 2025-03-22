@@ -1,0 +1,93 @@
+/* General Styles */
+.recommendation-container {
+    color: black;
+    background: #f4f4f4;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar h1 {
+    color: black;
+    padding: 20px;
+    background: #ddd;
+    text-align: center;
+  }
+  
+  /* Content Layout */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 70px);
+  }
+  
+  /* Left Section */
+  .left-section, .right-section {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px #ccc;
+    overflow-y: auto;
+  }
+  
+  .left-section {
+    border-right: 2px solid #ccc;
+  }
+  
+  /* Text and Inputs */
+  h2, p, label, h3 {
+    color: black;
+  }
+  
+  input, .dropdown-header {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Buttons */
+  .get-recommendation-btn {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .get-recommendation-btn:hover {
+    background: #45a049;
+  }
+  
+  .skip-btn {
+    background: #ffcc00;
+    color: black;
+  }
+  
+  .skip-btn:hover {
+    background: #e6b800;
+  }
+  
+  /* Right Section */
+  .right-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .right-section li {
+    background: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .no-recommendation {
+    color: #555;
+  }
+  
